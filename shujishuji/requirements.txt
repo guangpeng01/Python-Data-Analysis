@@ -1,6 +1,6 @@
-numpy==1.24.3
 pandas==1.5.3
-scikit-learn==1.2.2
+streamlit>=1.0  # 确保Streamlit版本正常
+numpy>=1.21  # 指定NumPy版本（建议1.21及以上，适配多数场景）
 streamlit==1.22.0
 pandas==1.5.3
 numpy==1.24.3
@@ -8,4 +8,5 @@ scikit-learn==1.2.2
 matplotlib==3.7.0
 seaborn==0.12.2
 python-dateutil==2.8.2
+
 
