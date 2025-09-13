@@ -1,13 +1,10 @@
 numpy>=2.0.0
-pandas>=2.0.0
+pandas>=2.0.0  # 仅保留一个版本要求
 streamlit>=1.0
-streamlit==1.22.0
-pandas==1.5.3
-numpy==1.24.3
+
 scikit-learn==1.2.2
 matplotlib==3.7.0
 seaborn==0.12.2
 python-dateutil==2.8.2
-
 
 
