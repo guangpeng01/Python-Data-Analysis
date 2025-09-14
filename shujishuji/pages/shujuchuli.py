@@ -178,6 +178,7 @@ def save_model(model):
             help="点击下载训练好的随机森林模型"
         )
         st.success("请模型下载")
+        clear_all()
     except Exception as e:
         st.error(f"模型保存失败: {str(e)}")
 
@@ -299,7 +300,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-    clear_all()
+    
+
 
 
 
