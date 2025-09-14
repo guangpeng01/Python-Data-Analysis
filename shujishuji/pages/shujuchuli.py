@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -158,6 +157,32 @@ def feature_selection(df):
 
     return None, None
 
+
+
+def save_model(model):
+    """将训练好的模型保存并提供下载按钮"""
+    try:
+        # 生成带时间戳的文件名
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"model_{timestamp}.pkl"
+        
+        # 将模型序列化为字节流
+        model_bytes = pickle.dumps(model)
+        
+        # 创建下载按钮
+        st.download_button(
+            label="💾 下载训练好的模型",
+            data=model_bytes,
+            file_name=filename,
+            mime="application/octet-stream",
+            help="点击下载训练好的随机森林模型"
+        )
+        st.success("请模型下载")
+    except Exception as e:
+        st.error(f"模型保存失败: {str(e)}")
+
+
+
 def train_random_forest(X, y):
     """训练随机森林模型（修复版）"""
     st.subheader('随机森林模型训练')
@@ -228,7 +253,7 @@ def train_random_forest(X, y):
                 columns=["预测负类", "预测正类"],
                 index=["真实负类", "真实正类"]
             ))
-
+        save_model(results['model'])  # 替换原来的保存代码
     return None
 
 def clear_all():
@@ -274,6 +299,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
