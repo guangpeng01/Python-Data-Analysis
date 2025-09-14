@@ -169,18 +169,20 @@ def save_model(model):
         # 将模型序列化为字节流
         model_bytes = pickle.dumps(model)
         
-        # 创建下载按钮
-        st.download_button(
+        # 创建下载按钮，并添加回调函数
+        if st.download_button(
             label="💾 下载训练好的模型",
             data=model_bytes,
             file_name=filename,
             mime="application/octet-stream",
-            help="点击下载训练好的随机森林模型"
-        )
-        st.success("请模型下载")
-        clear_all()
+            help="点击下载训练好的随机森林模型",
+            on_click=clear_all  # 添加这行，点击按钮后调用clear_all
+        ):
+            st.success("模型下载完成，已清空会话数据")
+            return True
     except Exception as e:
         st.error(f"模型保存失败: {str(e)}")
+    return False
 
 
 
@@ -301,6 +303,7 @@ def main():
 if __name__ == "__main__":
     main()
     
+
 
 
 
