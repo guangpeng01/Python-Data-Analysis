@@ -8,8 +8,7 @@ st.markdown("""#### 代码示例""")
 
 st.markdown("""##### 使用selenium获取百度地图路线信息""")
 
-st.markdown(
-```
+st.markdown(```
     from selenium import webdriver    
     from selenium.webdriver.chrome.service import Service   
     from selenium.webdriver.common.by import By   
@@ -147,8 +146,7 @@ st.markdown(
 
 st.markdown("""#### 使用scrapy获取住房信息""")
 
-st.markdown(
-```
+st.markdown(```
     import scrapy
     from scrapy_lianjia.items import ScrapyLianjiaItem
     import json
@@ -310,7 +308,8 @@ st.markdown(
 
 
 
-st.markdown("""#### 希望面试官可以考虑一下，我致以感谢""")
+st.markdown("""#### 希望面试官可以考虑一下，在这里致以感谢""")
+
 
 
 
