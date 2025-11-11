@@ -8,6 +8,8 @@ st.markdown("""#### 代码示例""")
 
 st.markdown("""##### 使用selenium获取百度地图路线信息""")
 
+st.markdown("""####  真心希望面试官可以看一下，可以的话，帮忙回复一下，在这里我致以感谢""")
+
 st.markdown(r"""
 ```python
 from selenium import webdriver    
@@ -308,9 +310,8 @@ class LianjieNewsSpider(scrapy.Spider):
         yield item_data
             """)
 
-
-
-st.markdown("""#### 希望面试官可以考虑一下，在这里致以感谢""")
+st.markdown("""#### 目前只是了解一些基础用法""")
+st.markdown("""#### 对自己的评价：感觉我个人有点自私了为了自己喜欢的事务不顾及自己父母的感受，让他们时不时为了我个人的事而担忧，感觉有点愧疚。""")
 
 
 
