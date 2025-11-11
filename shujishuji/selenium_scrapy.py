@@ -149,8 +149,7 @@ if __name__ == '__main__':
 
 st.markdown("""#### 使用scrapy获取住房信息""")
 
-st.markdown(r"""
-```python
+st.markdown(r"""```python
 import scrapy
 from scrapy_lianjia.items import ScrapyLianjiaItem
 import json
@@ -308,10 +307,11 @@ class LianjieNewsSpider(scrapy.Spider):
         
         self.logger.info(f"成功提取房屋: {response.meta['title']}")
         yield item_data
-            """)
+""")
 
 st.markdown("""#### 目前只是了解一些基础用法""")
-st.markdown("""#### 对自己的评价：感觉我个人有点自私了为了自己喜欢的事务不顾及自己父母的感受，让他们时不时为了我个人的事而担忧，感觉有点愧疚。""")
+st.markdown("""#### 对自己的评价：感觉我个人有点自私了，为了自己喜欢的事务，不顾及父母的感受，让他们时不时为了我个人的事而担忧，感觉有点愧疚。""")
+
 
 
 
