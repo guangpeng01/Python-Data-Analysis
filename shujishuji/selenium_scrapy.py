@@ -9,7 +9,6 @@ st.markdown("""#### 电话：17662513419(微信同号)""")
 st.markdown("""#### scrapy_spiders代码示例""")
 
 """
-
     from selenium import webdriver    
     from selenium.webdriver.chrome.service import Service   
     from selenium.webdriver.common.by import By   
@@ -21,7 +20,6 @@ st.markdown("""#### scrapy_spiders代码示例""")
     import os   
     import time 
 
-    # 输入起点和终点
     def input_start_end(start,end):
         start_input = driver.find_element(By.CLASS_NAME,"route-start-input")
         start_input.send_keys(start)
@@ -33,14 +31,11 @@ st.markdown("""#### scrapy_spiders代码示例""")
         search_button.click()
         time.sleep(1)
 
-
-    # 展开路线查找输入框
     def show_search_box():
         route_button = driver.find_element(By.XPATH,"//div[@data-title='路线']")
         route_button.click()
         time.sleep(1)
-
-    # 解析路线基本信息
+        
     def parse_route_basic(route_li_element):
 
         route_head_element = route_li_element.find_element(By.CLASS_NAME,"route-head")
@@ -69,7 +64,6 @@ st.markdown("""#### scrapy_spiders代码示例""")
         )
         return scheme_name
 
-    # 解析路线详情信息
     def parse_route_detail(route_li_element):
         route_li_element.click()  # 展开详情
         time.sleep(1.5)
@@ -105,7 +99,6 @@ st.markdown("""#### scrapy_spiders代码示例""")
             else:
                 print(f"未知的交通类型:{data_type=}")
 
-    # 截图路线地图
     def screenshot_line(scheme_name):
         mask_element = driver.find_element(By.ID,"mask")
         map_img_bytes = mask_element.screenshot_as_png  # 获取图片的字节数据
@@ -117,7 +110,6 @@ st.markdown("""#### scrapy_spiders代码示例""")
         img_file_path = f"{img_file_dir}/{scheme_name}.png"
         image_obj.save(img_file_path)  # 保存图片
 
-    # 解析路线基本信息
     def parse_route_list():
         wait = WebDriverWait(driver,10)
         route_list_element = wait.until(
@@ -312,4 +304,5 @@ st.markdown("""#### scrapy_spiders代码示例""")
             
             self.logger.info(f"成功提取房屋: {response.meta['title']}")
             yield item_data'''
+
 
