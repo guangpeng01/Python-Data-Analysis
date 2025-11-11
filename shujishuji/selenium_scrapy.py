@@ -2,10 +2,6 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-st.markdown("""#### 姓名：常广鹏""")
-
-st.markdown("""#### 电话：17662513419(微信同号)""")
-
 st.markdown("""#### scrapy_spiders代码示例""")
 
 """
@@ -306,3 +302,5 @@ st.markdown("""#### scrapy_spiders代码示例""")
             yield item_data'''
 
 
+
+st.markdown("""#### 希望面试官可以考虑一下，致以感谢""")
