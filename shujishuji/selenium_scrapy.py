@@ -2,12 +2,13 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-st.markdown("""##### 数据捕获""")
+st.markdown("""#### 数据捕获""")
 
-st.markdown("""##### 代码示例""")
+st.markdown("""#### 代码示例""")
 
 st.markdown("""##### 使用selenium获取百度地图路线信息""")
 
+st.markdown(
 ```
     from selenium import webdriver    
     from selenium.webdriver.chrome.service import Service   
@@ -142,10 +143,11 @@ st.markdown("""##### 使用selenium获取百度地图路线信息""")
         # 3.解析路线列表
         parse_route_list()
 
-```
+```)
 
-st.markdown("""##### 使用scrapy获取住房信息""")
+st.markdown("""#### 使用scrapy获取住房信息""")
 
+st.markdown(
 ```
     import scrapy
     from scrapy_lianjia.items import ScrapyLianjiaItem
@@ -304,10 +306,11 @@ st.markdown("""##### 使用scrapy获取住房信息""")
             
             self.logger.info(f"成功提取房屋: {response.meta['title']}")
             yield item_data
-            ```
+            ```)
 
 
 
-st.markdown("""#### 希望面试官可以考虑一下，致以感谢""")
+st.markdown("""#### 希望面试官可以考虑一下，我致以感谢""")
+
 
 
