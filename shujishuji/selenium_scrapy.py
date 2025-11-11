@@ -4,7 +4,7 @@ import streamlit as st
 
 st.markdown("""#### scrapy_spiders代码示例""")
 
-"""
+```
     from selenium import webdriver    
     from selenium.webdriver.chrome.service import Service   
     from selenium.webdriver.common.by import By   
@@ -138,11 +138,11 @@ st.markdown("""#### scrapy_spiders代码示例""")
         # 3.解析路线列表
         parse_route_list()
 
-"""
+```
 
 st.markdown("""#### scrapy_spiders代码示例""")
 
-'''
+```
     import scrapy
     from scrapy_lianjia.items import ScrapyLianjiaItem
     import json
@@ -299,8 +299,10 @@ st.markdown("""#### scrapy_spiders代码示例""")
             )
             
             self.logger.info(f"成功提取房屋: {response.meta['title']}")
-            yield item_data'''
+            yield item_data
+            ```
 
 
 
 st.markdown("""#### 希望面试官可以考虑一下，致以感谢""")
+
